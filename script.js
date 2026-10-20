@@ -1,44 +1,13 @@
-function showSection(sectionId) {
-	// Hide all sections
-	const sections = document.querySelectorAll('.content-section');
-	sections.forEach(s => s.style.display = 'none');
-
-	// Hide menu grid
-	document.getElementById('menuGrid').style.display = 'none';
-
-	// Show selected section
-	document.getElementById(sectionId).style.display = 'block';
-
-	// Scroll to top
-	window.scrollTo(0, 0);
-}
-
-function backToMenu() {
-	// Show menu grid
-	document.getElementById('menuGrid').style.display = 'grid';
-
-	// Hide all sections
-	const sections = document.querySelectorAll('.content-section');
-	sections.forEach(s => s.style.display = 'none');
-
-	// Scroll to top
-	window.scrollTo(0, 0);
-}
-
-document.querySelector('.back-to-top')?.addEventListener('click', (event) => {
-	event.preventDefault();
-	window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
+// Back-to-top button: show only when scrolling up while below the top.
 const backToTopButton = document.querySelector('.back-to-top');
 let lastScrollPosition = window.scrollY;
+let scrollTicking = false;
 
-window.addEventListener('scroll', () => {
+function updateBackToTop(currentScrollPosition) {
 	if (!backToTopButton) {
 		return;
 	}
 
-	const currentScrollPosition = window.scrollY;
 	const scrollDelta = currentScrollPosition - lastScrollPosition;
 
 	if (currentScrollPosition <= 40 || scrollDelta > 8) {
@@ -48,4 +17,20 @@ window.addEventListener('scroll', () => {
 	}
 
 	lastScrollPosition = currentScrollPosition;
+}
+
+window.addEventListener('scroll', () => {
+	if (scrollTicking) {
+		return;
+	}
+	scrollTicking = true;
+	requestAnimationFrame(() => {
+		updateBackToTop(window.scrollY);
+		scrollTicking = false;
+	});
 }, { passive: true });
+
+backToTopButton?.addEventListener('click', (event) => {
+	event.preventDefault();
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+});
