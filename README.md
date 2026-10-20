@@ -9,13 +9,11 @@ A sleek, dark-themed corporate web application layout built with custom neon amb
 * **Glassmorphism UI:** Translucent CSS cards with backdrop filters and animated radial gradients.
 * **Ambient Lighting Effects:** Continuous background ambient glow and drift animations.
 * **Responsive Contact Portal:** Functional HTML contact form with modern input styling.
-* **Vanilla JS Navigation:** Fast DOM switching between pages and menu views without page reloads.
 
 ## 🛠️ Built With
 * **HTML5** – Semantic markup
 * **CSS3** – CSS Variables, Keyframes, Flexbox, and CSS Grid
-* **JavaScript (ES6)** – DOM manipulation and navigation state management
-* **FontAwesome 6** – Vector iconography
+* **JavaScript (ES6)** – Navigation behaviour
 
 ## ⚙️ How to Run Locally
 1. Clone this repository:
