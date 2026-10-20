@@ -4,17 +4,21 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Contact Us</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<title>Contact Us | Private Firm Company Ltd</title>
+	<meta name="description"
+		content="Contact Private Firm Company Ltd in Lusaka, Zambia. Send us a message about your software project or partnership inquiry.">
+	<link rel="canonical" href="https://kambolewahila99-web.github.io/project-alpha/contact_us.html">
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 		crossorigin="anonymous">
 	<link rel="stylesheet" href="thewebsite.css">
 </head>
 
-<body>
+<body id="top">
+	<a class="skip-link" href="#main-content">Skip to main content</a>
+
 	<!-- Ambient Background -->
-	<div class="ambient-bg">
+	<div class="ambient-bg" aria-hidden="true">
 		<div class="orb orb-1"></div>
 		<div class="orb orb-2"></div>
 	</div>
@@ -24,14 +28,14 @@
 
 	<div class="container">
 		<!-- Header -->
-		<div class="header" id="mainHeader">
-			<h1 class="brand-name">Private Firm<br>Company Ltd</h1>
+		<header class="header" id="mainHeader">
+			<p class="brand-name">Private Firm<br>Company Ltd</p>
 			<p class="tagline">Digital Excellence All The Way</p>
-		</div>
+		</header>
 
-		<main>
+		<main id="main-content">
 			<div class="page-header">
-				<a href="index.html" class="back-btn"><i class="fa fa-arrow-left"></i> Back to Home</a>
+				<a href="index.html" class="back-btn">← Back to Home</a>
 				<h1>Contact Us</h1>
 				<p class="page-subtitle">Get in Touch</p>
 			</div>
@@ -45,29 +49,29 @@
 			</section>
 
 			<section class="content-section page-section">
-				<div class="contact-options">
+				<div class="contact-options grid-auto">
 					<div class="contact-option">
-						<div class="contact-option-icon"><i class="fa fa-bullhorn"></i></div>
-						<h3><a href="#" class="contact-link">Option 1</a></h3>
-						<p>First Option</p>
+										<div class="contact-option-icon"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i></div>
+						<h3>Software Design</h3>
+						<p>UI/UX design for new or existing software products.</p>
 					</div>
 
 					<div class="contact-option">
-						<div class="contact-option-icon"><i class="fa fa-shield-alt"></i></div>
-						<h3><a href="#" class="contact-link">Option 2</a></h3>
-						<p>Second Option</p>
+						<div class="contact-option-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+						<h3>Software Development</h3>
+						<p>Build reliable, maintainable web applications.</p>
 					</div>
 
 					<div class="contact-option">
-						<div class="contact-option-icon"><i class="fa fa-code"></i></div>
-						<h3>Option 3</h3>
-						<p>Third Option</p>
+						<div class="contact-option-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+						<h3>Code Consultation</h3>
+						<p>Review and improve your existing codebase.</p>
 					</div>
 
 					<div class="contact-option">
-						<div class="contact-option-icon"><i class="fa fa-handshake"></i></div>
-						<h3>Option 4</h3>
-						<p>Fourth Option</p>
+						<div class="contact-option-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
+						<h3>Partnership</h3>
+						<p>Collaborate on software projects and ventures.</p>
 					</div>
 				</div>
 			</section>
@@ -75,50 +79,50 @@
 			<section class="content-section page-section">
 				<h2 class="section-center-title">Send Me a Message</h2>
 				<div class="contact-form-wrapper">
-					<form action="mailto:info@kambolewahila99@gmail.com?subject=Inquiry from Website" method="post"
+					<form action="mailto:info@kambolewahila99@gmail.com?subject=Inquiry%20from%20Website" method="post"
 						enctype="text/plain" class="modern-contact-form">
 						<div class="form-row">
 							<div class="form-group">
-								<label for="first-name">First Name *</label>
-								<input type="text" id="first-name" name="first_name" placeholder="Wahila" required>
+								<label for="first-name">First Name <span aria-hidden="true">*</span></label>
+								<input type="text" id="first-name" name="first_name" autocomplete="given-name" placeholder="Wahila" required aria-required="true">
 							</div>
 
 							<div class="form-group">
 								<label for="middle-name">Middle Name</label>
-								<input type="text" id="middle-name" name="middle_name" placeholder="">
+								<input type="text" id="middle-name" name="middle_name" autocomplete="additional-name">
 							</div>
 						</div>
 
 						<div class="form-row">
 							<div class="form-group">
 								<label for="surname">Surname *</label>
-								<input type="text" id="surname" name="surname" placeholder="Kambole" required>
+								<input type="text" id="surname" name="surname" autocomplete="family-name" placeholder="Kambole" required aria-required="true">
 							</div>
 
 							<div class="form-group">
 								<label for="organization">Company/Organization</label>
-								<input type="text" id="organization" name="organization" placeholder="Your Company">
+								<input type="text" id="organization" name="organization" autocomplete="organization" placeholder="Your Company">
 							</div>
 						</div>
 
 						<div class="form-row">
 							<div class="form-group">
 								<label for="phone-number">Phone Number *</label>
-								<input type="tel" id="phone-number" name="phone_number" placeholder="+260-XXX-XXXX"
-									required>
+								<input type="tel" id="phone-number" name="phone_number" autocomplete="tel" placeholder="+260-XXX-XXXX"
+									required aria-required="true">
 							</div>
 
 							<div class="form-group">
 								<label for="email-address">Email Address *</label>
-								<input type="email" id="email-address" name="email_address" placeholder="your@email.com"
-									required>
+								<input type="email" id="email-address" name="email_address" autocomplete="email" placeholder="your@email.com"
+									required aria-required="true">
 							</div>
 						</div>
 
 						<div class="form-group full-width">
 							<label for="message">Message *</label>
 							<textarea id="message" name="message" placeholder="Tell me about your inquiry..." rows="6"
-								required></textarea>
+								required aria-required="true"></textarea>
 						</div>
 
 						<button type="submit" class="submit-btn">Send Message</button>
@@ -128,18 +132,20 @@
 
 			<section class="content-section page-section contact-info-section">
 				<h2 class="section-center-title">Other Ways to Reach Us</h2>
-				
+
+				<div class="contact-methods grid-auto">
 					<div class="contact-method">
-						<div class="method-icon"><i class="fa fa-envelope"></i></div>
+						<div class="method-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
 						<h3>Email</h3>
-						<p><a href="#">info@xxxxxxx.com</a></p>
+						<p><a href="mailto:info@kambolewahila99@gmail.com">info@kambolewahila99@gmail.com</a></p>
 					</div>
 
 					<div class="contact-method">
-						<div class="method-icon"><i class="fa fa-map-marker"></i></div>
+						<div class="method-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
 						<h3>Location</h3>
-						<p><a href="#">Lusaka, Zambia</a></p>
+						<p>Lusaka, Zambia</p>
 					</div>
+				</div>
 			</section>
 		</main>
 		<!-- Footer -->
@@ -147,16 +153,23 @@
 			<div class="footer-content">
 				<div class="footer-minimal">
 					<div class="footer-brand-wrap">
-						<h3 class="footer-brand">Website Layout</h3>
+						<h2 class="footer-brand">Website Layout</h2>
 						<p class="footer-desc">Website Project · Lusaka, Zambia</p>
 					</div>
 
 					<div class="footer-social-links">
 						<a class="social-btn" href="https://github.com/kambolewahila99-web" target="_blank"
-							rel="noopener"><i class="fab fa-github"></i></a>
+							rel="noopener noreferrer" aria-label="GitHub profile">
+							<i class="fa-brands fa-github" aria-hidden="true"></i>
+						</a>
 						<a class="social-btn" href="https://linkedin.com/in/wahila-k-frontend-developer" target="_blank"
-							rel="noopener"><i class="fab fa-linkedin"></i></a>
-						<a class="social-btn" href="https://wa.me/260953014252" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+							rel="noopener noreferrer" aria-label="LinkedIn profile">
+							<i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+						</a>
+						<a class="social-btn" href="https://wa.me/260953014252" target="_blank" rel="noopener noreferrer"
+							aria-label="WhatsApp chat">
+							<i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+						</a>
 					</div>
 				</div>
 				<div class="footer-legal-small">
@@ -164,14 +177,12 @@
 				</div>
 			</div>
 		</footer>
-	</div>
 
 	<a class="back-to-top" href="#top" aria-label="Back to top" title="Back to top">
-		<i class="fa fa-arrow-up" aria-hidden="true"></i>
+		<i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
 	</a>
-
-	<script src="script.js"></script>
-
+	</div>
+	<script src="script.js" defer></script>
 </body>
 
 </html>
